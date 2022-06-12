@@ -24,7 +24,7 @@ const App = () => {
             Name :
             <input id="name" type="text" name="name" />
           </label>
-          {error.name == null || error.name == "" ? null : error.name}
+          {error.name != null && error.name != "" ? error.name : null}
         </div>
         <br />
         <div>
@@ -32,7 +32,7 @@ const App = () => {
             Email :
             <input id="email" type="text" name="email" />
           </label>
-          {error.email == null || error.email == "" ? null : error.email}
+          {error.email != null && error.email != "" ? error.email : null}
         </div>
         <br />
         <div>
@@ -40,9 +40,9 @@ const App = () => {
             Password :
             <input id="password" type="text" name="password" />
           </label>
-          {error.password == null || error.password == ""
-            ? null
-            : error.password}
+          {error.password != null && error.password != ""
+            ? error.password
+            : null}
         </div>
         <br />
         <div>
