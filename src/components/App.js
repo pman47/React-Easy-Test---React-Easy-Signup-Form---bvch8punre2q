@@ -3,7 +3,7 @@ import "../styles/App.css";
 import { signUpFormValidation } from "../utils/validation";
 
 const App = () => {
-  const [error, setError] = useState({});
+  const [error, setError] = useState({ name: "", email: "", password: "" });
 
   const validate = (event) => {
     event.preventDefault();
@@ -13,7 +13,11 @@ const App = () => {
       password: event.target.password.value,
       name: event.target.name.value,
     });
-    setError(errors);
+    if (errors == null) {
+      setError({ name: "", email: "", password: "" });
+    } else {
+      setError(errors);
+    }
   };
 
   return (
