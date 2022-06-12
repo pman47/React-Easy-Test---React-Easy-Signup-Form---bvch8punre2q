@@ -53,7 +53,7 @@ const App = () => {
         </div>
         <br />
         <div>
-          <input type="submit" value="Signup" />
+          <button type="submit">Signup</button>
         </div>
       </form>
     </>
